@@ -1,0 +1,47 @@
+This is the alpha release of the VARIUS variation model.
+
+The core is written for the R statistical package, which can be
+downloaded here: http://www.r-project.org/
+
+This package contains the following files:
+
+spatial-grid.R - Implements the functions to generate systematic
+                 variation maps with a spherical correlation
+                 function. The output format is a matrix of points.
+
+spatial-blocks.R - Implements the functions to generate systematic
+                   variation maps at the level of processor functional
+                   blocks. Takes a Hotspot-type floorplan as
+                   input. Returns a data frame containing the mean Vt
+                   and Leff values for each unit in the floorplan.
+
+delay.R - Implements the VARIUS timing error model. 
+
+Also included are two examples of how two use the model.
+
+example-grid.R - uses spatial-grid.R to generate variation maps.
+
+example-block.R - uses spatial-blocks.R to generate block-level
+                  variation maps. It then applies the VARIUS timing
+                  error model to each unit and plots a collection of
+                  error rate versus frequency curves --- one for each
+                  functional unit.
+
+For more information on the model, please take a look at the following
+papers:
+
+"VARIUS: A Model of Process Variation and Resulting Timing Errors for
+Microarchitects" by Smruti R. Sarangi, Brian Greskamp, Radu
+Teodorescu, Jun Nakano, Abhishek Tiwari and Josep Torrellas, IEEE
+Transactions on Semiconductor Manufacturing (IEEE TSM), to appear 2007
+
+http://iacoma.cs.uiuc.edu/iacoma-papers/tsm.pdf
+
+and 
+
+"VARIUS: A Model of Parameter Variation and Resulting Timing Errors
+for Microarchitects" by Radu Teodorescu, Brian Greskamp, Jun Nakano,
+Smruti R. Sarangi, Abhishek Tiwari and Josep Torrellas, Workshop on
+Architectural Support for Gigascale Integration (ASGI), June 2007.
+
+http://iacoma.cs.uiuc.edu/iacoma-papers/asgi07.pdf

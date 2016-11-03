@@ -1,0 +1,1 @@
+nvcc -O3 -G -g -I /usr/local/cuda/include/ -I /usr/share/R/include/ -L /usr/lib/R/lib/ -lR --shared -Xcompiler -fPIC -o alpha_Delay.so alpha_Delay.cu
